@@ -4,7 +4,7 @@ import { BiLogoTelegram, BiLogoFacebook } from 'react-icons/bi';
 
 const SocialIcons = () => {
     return (
-        <div className='flex gap-2 text-gray-400'>
+        <div className='lg:flex md:flex gap-2 text-gray-400 sm:hidden'>
             <AiFillInstagram />
             <BiLogoFacebook />
             <BiLogoTelegram />
