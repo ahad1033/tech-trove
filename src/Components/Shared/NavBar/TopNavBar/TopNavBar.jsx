@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './logo';
 import TopNavOptions from './TopNavOptions';
 import SearchOption from './SearchOption';
+import SocialIcons from './SocialIcons';
 
 const TopNavBar = () => {
 
@@ -18,7 +19,7 @@ const TopNavBar = () => {
                 <TopNavOptions />
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <SocialIcons />
             </div>
         </div>
     );

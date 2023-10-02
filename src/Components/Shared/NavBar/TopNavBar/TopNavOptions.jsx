@@ -3,10 +3,10 @@ import React from 'react';
 const TopNavOptions = () => {
 
     const navOptions = <>
-        <li><a>About Us</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Contact Us</a></li>
-        <li><a>Help & Support</a></li>
+        <li className='text-sm'><a>About Us</a></li>
+        <li className='text-sm'><a>Blog</a></li>
+        <li className='text-sm'><a>Contact Us</a></li>
+        <li className='text-sm'><a>Help & Support</a></li>
     </>
 
     return (
