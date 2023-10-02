@@ -19,7 +19,7 @@ const TopNavOptions = () => {
                     {navOptions}
                 </ul>
             </div>
-            <div className="navbar-center hidden lg:flex flex-row">
+            <div className="lg:flex flex-row">
                 <ul className="menu menu-horizontal px-1">
                     {navOptions}
                 </ul>

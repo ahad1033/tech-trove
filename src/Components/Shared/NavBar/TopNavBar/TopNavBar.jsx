@@ -7,18 +7,15 @@ import SocialIcons from './SocialIcons';
 const TopNavBar = () => {
 
     return (
-        <div className="navbar bg-base-100">
-            <div className="navbar-start">
-                <div className="flex gap-3 items-center">
+        <div className="navbar lg:flex-row md:flex-col lg:justify-between bg-base-100">
+            <div className="w-full">
+                <div className="flex flex-row gap-3 items-center justify-between ">
                     <Logo />
                     <SearchOption />
                 </div>
             </div>
-            <div className="hidden lg:flex">
-                {/* menu options were here */}
+            <div className="flex justify-between w-full">
                 <TopNavOptions />
-            </div>
-            <div className="navbar-end">
                 <SocialIcons />
             </div>
         </div>

@@ -5,7 +5,7 @@ import { AiOutlineDown } from 'react-icons/ai';
 const SearchOption = () => {
     return (
         <div className='flex items-center justify-center border border-1 rounded-xl px-1 gap-2'>
-            <input type="text" placeholder="Search Products" className="input w-full max-w-xs" />
+            <input type="text" placeholder="Search Products" className="input" />
             <details className="dropdown">
                 <summary className="mx-1 text-xs btn normal-case whitespace-nowrap flex items-center">
                     All Categories <AiOutlineDown className="ml-1" />
@@ -15,7 +15,7 @@ const SearchOption = () => {
                     <li><a>Item 2</a></li>
                 </ul>
             </details>
-            <FaSearch className='text-6xl pl-2 mx-2' />
+            <FaSearch className='text-3xl pl-2 mx-2 border-s-1' />
         </div>
     );
 };
