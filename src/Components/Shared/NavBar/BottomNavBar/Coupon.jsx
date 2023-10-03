@@ -2,11 +2,11 @@ import React from 'react';
 
 const Coupon = () => {
     return (
-        <div className='flex flex-row gap-3 items-center'>
+        <div className='lg:flex lg:flex-row md:hidden sm:hidden gap-3 items-center'>
             <img src={'https://i.ibb.co/SKZ0mFX/Men-cosmetic.png'} alt="img" />
-            <div>
+            <div className='text-white text-xs'>
                 <h3 className='font-semibold'>Weekly Men's Toiletries Coupons.</h3>
-                <p>We extend exclusive discounts to our male clientele</p>
+                <p className='mt-2'>We extend exclusive discounts to our male clientele</p>
             </div>
         </div>
     );

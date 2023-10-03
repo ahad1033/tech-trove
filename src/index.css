@@ -5,3 +5,7 @@
 :root {
     --bg-secondary: #262626;
 }
+
+.section-container {
+    @apply xl:px-48 lg:px-24 md:px-10 sm:px-4;
+  }
