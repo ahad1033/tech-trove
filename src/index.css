@@ -4,8 +4,16 @@
 
 :root {
     --bg-secondary: #262626;
+    --btn-bg-primary: #4172DC;
 }
 
 .section-container {
     @apply xl:px-48 lg:px-24 md:px-10 sm:px-4;
   }
+
+  .button-primary {
+    @apply btn btn-xs btn-wide sm:btn-sm md:btn-md lg:btn-lg uppercase text-white border-0;
+    border-radius: var(--spacing-1, 4px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), var(--btn-bg-primary);
+  }
+  
