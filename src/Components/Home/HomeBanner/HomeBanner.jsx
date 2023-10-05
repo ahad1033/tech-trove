@@ -4,7 +4,7 @@ import { TbShoppingBagPlus } from 'react-icons/tb';
 const HomeBanner = () => {
     return (
         <div className='flex'>
-            <div className='w-1/3 relative'>
+            <div className='lg:w-1/3 md:1/2 h-[547px] relative'>
                 <img
                     src='https://i.ibb.co/hXjcCxW/banner-Left.jpg'
                     alt=""
@@ -20,9 +20,9 @@ const HomeBanner = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-2/3'>
+            <div className='lg:w-2/3 md:w-1/2'>
                 <div
-                    className='h-full object-cover flex flex-col items-center justify-center lg:gap-7 md:gap-4 text-white text-3xl'
+                    className='h-full object-cover lg:flex md:flex lg:flex-col md:flex-col items-center justify-center lg:gap-7 md:gap-4 text-white text-3xl lg:p-0 md:px-20'
                     style={{
                         background: 'url(<path-to-image>)',
                         borderRadius: 'var(--spacing-0, 0px)',
@@ -32,8 +32,8 @@ const HomeBanner = () => {
                         backgroundColor: 'var(--button-default, #4172DC)',
                     }}
                 >
-                    <h1 className='text-4xl uppercase '>Kimonos, Caftans & Pareos</h1>
-                    <h2 className=''>Poolside glam included From $4.99</h2>
+                    <h1 className='text-4xl uppercase text-center'>Kimonos, Caftans & Pareos</h1>
+                    <h2 className='text-center'>Poolside glam included From $4.99</h2>
                     <button className="button-primary"><TbShoppingBagPlus />Shop Now</button>
                 </div>
             </div>
