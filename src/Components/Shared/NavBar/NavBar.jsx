@@ -5,11 +5,11 @@ import CategoryNav from './CategoryNav/CategoryNav';
 
 const NavBar = () => {
     return (
-        <div>
+        <nav>
             <TopNavBar />
             <BottomNavBar />
             <CategoryNav />
-        </div>
+        </nav>
     );
 };
 

@@ -19,15 +19,15 @@ const TopFooter = () => {
 
     return (
         <div className='section-container mt-4 pb-1 border-b-2 flex justify-center sm:justify-between'>
-            <div className='flex gap-3 items-center text-gray-500'>
+            <div className='flex gap-6 items-center text-gray-500'>
                 <BiLogoVisa className='text-6xl' />
                 <BiLogoMastercard className='text-4xl' />
-                <FaCcPaypal className='text-3xl' />
+                <FaCcPaypal className='text-2xl' />
             </div>
             <div className="sm:inline-block hidden relative text-center">
                 <button
                     onClick={toggleDropdown}
-                    className="px-4 py-2 flex flex-row-reverse items-center gap-2 text-black"
+                    className="pb-4 py-2 flex flex-row-reverse items-center gap-2 text-black"
                 > <AiOutlineDown />
                     {selectedLanguage}
                 </button>

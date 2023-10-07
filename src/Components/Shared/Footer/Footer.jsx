@@ -4,10 +4,10 @@ import TopFooter from './TopFooter';
 
 const Footer = () => {
     return (
-        <div>
+        <footer>
             <TopFooter />
             <BottomFooter />
-        </div>
+        </footer>
     );
 };
 
