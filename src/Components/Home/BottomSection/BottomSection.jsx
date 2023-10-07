@@ -4,7 +4,7 @@ import { PiNavigationArrowFill } from 'react-icons/pi'
 const BottomSection = () => {
     return (
         <div className='relative mt-80'>
-            <div className='w-2/5 h-96 absolute inset-1/2 transform -translate-x-1/2  text-center px-36 py-20 rounded-xl -top-56' style={{ backgroundColor: '#7296AB' }}>
+            <div className='w-2/5 h-96 absolute inset-1/2 transform -translate-x-1/2  text-center px-36 py-20 rounded-xl -top-56  hidden lg:block' style={{ backgroundColor: '#7296AB' }}>
                 <h1 className='mb-3 text-5xl text-white'>Tech<span className='font-bold'>Trove</span></h1>
                 <p className='mb-6 text-white font-semibold'>Register your email not to miss the last minutes off+ Free delivery</p>
                 <div className="form-control">
