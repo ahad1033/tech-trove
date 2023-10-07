@@ -1,12 +1,12 @@
 import React from 'react';
 import HomeBanner from '../../Components/Home/HomeBanner/HomeBanner';
-import HomePageTopFooter from '../../Components/Shared/HomePageTopFooter/HomePageTopFooter';
+import Footer from '../../Components/Shared/Footer/Footer';
 
 const Home = () => {
     return (
         <div>
             <HomeBanner />
-            <HomePageTopFooter />
+            <Footer />
         </div>
     );
 };

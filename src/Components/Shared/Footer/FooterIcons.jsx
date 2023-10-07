@@ -1,17 +1,17 @@
 import React from 'react';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { FiFacebook } from 'react-icons/fi';
-import { LiaTelegramPlane } from 'react-icons/li';
+import { PiTelegramLogoDuotone } from 'react-icons/pi';
 
 
-const HomePageFooterIcons = () => {
+const FooterIcons = () => {
     return (
-        <div className='lg:flex md:flex gap-2 text-gray-400 sm:hidden'>
+        <div className='flex gap-2 justify-between'>
             <AiOutlineInstagram />
             <FiFacebook />
-            <LiaTelegramPlane />
+            <PiTelegramLogoDuotone />
         </div>
     );
 };
 
-export default HomePageFooterIcons;
+export default FooterIcons;
