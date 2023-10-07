@@ -3,7 +3,7 @@ import React from 'react';
 const CategoryNav = () => {
     return (
         <div className='section-container bg-white mt-7 py-2'>
-             <ul className='lg:flex md:flex lg:flex-row md:flex-row sm:hidden justify-between  text-black font-semi-bold '>
+             <ul className='lg:flex md:flex sm:hidden justify-between  text-black font-semi-bold '>
                 <a href=""><li>Woman</li></a>
                 <a href=""><li>Male</li></a>
                 <a href=""><li>Mother-Child</li></a>
