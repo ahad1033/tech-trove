@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterIcons from './FooterIcons';
 
-const TopFooter = () => {
+const BottomFooter = () => {
     return (
         <div className='flex justify-between section-container py-10'>
             <h3 className='font-bold'>165-179 Forster Road City of Monash, Melbourne, Australia</h3>
@@ -11,4 +11,4 @@ const TopFooter = () => {
     );
 };
 
-export default TopFooter;
+export default BottomFooter;

@@ -1,10 +1,10 @@
 import React from 'react';
-import TopFooter from './TopFooter';
+import BottomFooter from './BottomFooter';
 
 const Footer = () => {
     return (
         <div>
-            <TopFooter />
+            <BottomFooter />
         </div>
     );
 };
