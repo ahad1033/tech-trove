@@ -3,12 +3,12 @@ import SectionTitle from '../../Shared/SectionTitle/SectionTitle';
 
 const FlashSale = () => {
     return (
-        <div>
+        <section className='section-container'>
             <SectionTitle title={"Flash Sale"} />
             <div>
                 
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -1,13 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TopNavOptions = () => {
 
     const navOptions = <>
-        <li className='text-sm'><a>About Us</a></li>
-        <li className='text-sm'><a>Blog</a></li>
-        <li className='text-sm'><a>Contact Us</a></li>
-        <li className='text-sm'><a>Help & Support</a></li>
-    </>
+    <Link className='text-base mx-2' to='/'>Home</Link>
+    <span className='mx-2 text-base'>|</span>
+    <Link className='text-base mx-2' to='/'>About Us</Link>
+    <span className='mx-2 text-base'>|</span>
+    <Link className='text-base mx-2' to='/blog'>Blog</Link>
+    <span className='mx-2 text-base'>|</span>
+    <Link className='text-base mx-2' to='/blog'>Contact Us</Link>
+    <span className='mx-2 text-base'>|</span>
+    <Link className='text-base mx-2' to='/blog'>Help & Support</Link>
+  </>
 
     return (
         <div className='flex justify-between'>
