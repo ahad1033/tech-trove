@@ -12,6 +12,7 @@ const BlogBanner = () => {
                     <h1 className='lg:text-7xl md:text-5xl sm:text-xl uppercase font-bold text-white leading-6 lg:w-full md:w-3/4 sm:w-full'>Stunning barefooted <p className='lg:mt-7 md:mt:5 sm:mt-3'>woman of 2023</p></h1>
                     <p className='uppercase text-white lg:mt-12 md:mt-5 sm:mt-3 lg:w-[500px] w-[300px]'>In the heart of a chic urban studio, the atmosphere buzzed with excitement as a trendy fur coat took center stage during a vibrant photoshoot.</p>
                     <button className="btn btn-outline text-white border-white lg:mt-12 md:mt-5 sm:mt-5">Read More</button>
+                    {/* TO DO - add some dynamic icon */}
                     <div className='lg:flex md:flex sm:hidden text-white mt-10 lg:gap-5  md:gap-10'>
                         <div className='lg:w-[290px] w-[150px]'>
                             <h2 className='uppercase font-bold text-lg mb-3'>Elevating Everyday Style</h2>
