@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlogGalaray = () => {
     return (
-        <div className='section-container w-full flex justify-center gap-5 lg:my-16 mg:my-10 sm:m-8'>
+        <div className='section-container w-full mx-auto flex justify-center gap-5 lg:my-16 md:my-10 sm:my-8'>
             <div className='w-2/3'>
                 <img className='w-full h-full' src="https://i.ibb.co/VgjVgY0/blog-Galary1.png" alt="" />
             </div>
