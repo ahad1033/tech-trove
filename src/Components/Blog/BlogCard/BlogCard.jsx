@@ -4,8 +4,8 @@ import BottomCard from './BottomCard';
 
 const BlogCard = () => {
     return (
-        <section className='section-container flex flex-col my-16'>
-            <TopCard />
+        <section className='lg:px-28 md:px-12 sm:p-10 flex flex-col justify-center my-16 w-full mx-auto'>
+            {/* <TopCard /> */}
             <BottomCard />
         </section>
     );
