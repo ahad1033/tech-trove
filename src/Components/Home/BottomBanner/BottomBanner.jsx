@@ -2,8 +2,8 @@ import React from 'react';
 
 const BottomBanner = () => {
     return (
-        <div className='section-container my-20'>
-            <div className='flex gap-5'>
+        <div className='my-20'>
+            <div className='section-container flex gap-5'>
                 <div className='flex flex-row rounded-lg w-1/2'>
                     <div className="flex  flex-col text-white px-5 lg:px-10 py-7 lg:py-16 w-1/2 rounded-s-lg justify-around" style={{ backgroundColor: "#BF2E3B" }}>
                         <h2 className="text-2xl lg:text-4xl font-bold">Never-Ending Summer</h2>
@@ -25,7 +25,17 @@ const BottomBanner = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex gap-5'>
+
+            {/* middle carousel */}
+            <div className='flex justify-around my-16' style={{backgroundColor: '#F7DDD0'}}>
+                <div className='flex flex-col justify-center'>
+                    <h2 className='text-xl font-semibold mb-5'>MAGSAFE</h2>
+                    <p>Snap on a magnetic case, wallet, or both. And get faster wireless charging.</p>
+                </div>
+                <figure><img src="https://i.ibb.co/cyNpFYx/Iphone.png" alt="" /></figure>
+            </div>
+
+            <div className='section-container flex gap-5'>
                 <div className='flex flex-row rounded-lg w-1/2'>
                     <div className="flex flex-col text-white px-5 lg:px-10 py-7 lg:py-16 w-1/2 rounded-s-lg justify-around" style={{ backgroundColor: "#D11FB5" }}>
                         <h2 className="text-2xl lg:text-4xl font-bold">The Pinky Barbie Edition</h2>
