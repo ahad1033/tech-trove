@@ -4,6 +4,7 @@ import Footer from '../../Components/Shared/Footer/Footer';
 import BottomSection from '../../Components/Home/BottomSection/BottomSection';
 import FlashSale from '../../Components/Home/FlashSale/FlashSale';
 import Trending from '../../Components/Trending/Trending';
+import BottomBanner from '../../Components/Home/BottomBanner/BottomBanner';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <HomeBanner />
             <FlashSale />
             <Trending />
+            <BottomBanner />
             <BottomSection />
             <Footer />
         </div>
