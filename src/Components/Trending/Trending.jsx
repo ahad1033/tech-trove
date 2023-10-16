@@ -1,8 +1,10 @@
 import React from 'react';
+import SectionTitle from '../Shared/SectionTitle/SectionTitle';
 
 const Trending = () => {
     return (
-        <div>
+        <div className='section-container'>
+            <SectionTitle title={`Trending Must Have`} />
             <div className='w-96'>
                 <img src="https://i.ibb.co/f4pC4jQ/4-org-zoom-1.png" alt="" />
                 <div className='flex justify-between bottom-0 text-white p-4' style={{backgroundColor: '#262626'}}>
