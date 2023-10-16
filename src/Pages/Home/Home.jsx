@@ -5,6 +5,7 @@ import BottomSection from '../../Components/Home/BottomSection/BottomSection';
 import FlashSale from '../../Components/Home/FlashSale/FlashSale';
 import Trending from '../../Components/Trending/Trending';
 import BottomBanner from '../../Components/Home/BottomBanner/BottomBanner';
+import TopHundred from '../../Components/Home/TopHundred/TopHundred';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <HomeBanner />
             <FlashSale />
             <Trending />
+            <TopHundred />
             <BottomBanner />
             <BottomSection />
             <Footer />
