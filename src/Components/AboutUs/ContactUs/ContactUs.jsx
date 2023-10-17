@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContactUs = () => {
     return (
-        <div className='section-container flex flex-row'>
+        <div className='section-container flex flex-row my-10 lg:my-20'>
             <div className='w-full lg:w-1/2 p-14 relative' style={{ backgroundColor: '#262626' }}>
                 <h2 className='text-5xl font-bold text-white'>Tell us about your <p className='mt-3' style={{ color: '#FFC94B' }}>Concerns</p></h2>
                 <div className="form-control w-full mt-8">
