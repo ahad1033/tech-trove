@@ -22,6 +22,7 @@ const BottomBanner = () => {
                         <p className='underline'>Explore all category</p>
                     </div>
                     <div className="w-1/2">
+                        {/* <div className="h-full bg-cover" style={{ background: `url('https://i.ibb.co/98zB4Sf/Rectangle-1078.png') center/cover no-repeat` }}></div> */}
                         <figure><img className='rounded-e-lg h-full w-full' src="https://i.ibb.co/98zB4Sf/Rectangle-1078.png" alt="" /></figure>
                     </div>
                 </div>
@@ -32,7 +33,8 @@ const BottomBanner = () => {
                         <p className='underline'>Explore all category</p>
                     </div>
                     <div className="w-1/2">
-                        <figure><img className='rounded-e-lg w-full' src="https://i.ibb.co/F62pqJN/Rectangle-1078.png" alt="" /></figure>
+                        <div className="h-full bg-cover" style={{ background: `url('https://i.ibb.co/F62pqJN/Rectangle-1078.png') center/cover no-repeat` }}></div>
+                        {/* <figure><img className='rounded-e-lg w-full' src="https://i.ibb.co/F62pqJN/Rectangle-1078.png" alt="" /></figure> */}
                     </div>
                 </div>
             </div>

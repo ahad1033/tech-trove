@@ -4,16 +4,16 @@ import BottomNavBar from '../../Components/Shared/NavBar/BottomNavBar/BottomNavB
 import BottomSection from '../../Components/Home/BottomSection/BottomSection';
 import Footer from '../../Components/Shared/Footer/Footer';
 
-const SignIn = () => {
+const SignUp = () => {
     return (
         <div>
              <TopNavBar />
             <BottomNavBar />
-            <h3 className='text-center text-6xl mt-24'>sign in will be here</h3>
+            <h3 className='text-center text-6xl mt-24'>sign up will be here</h3>
             <BottomSection />
             <Footer />
         </div>
     );
 };
 
-export default SignIn;
+export default SignUp;
