@@ -5,7 +5,7 @@ const Trending = () => {
     return (
         <div className='section-container'>
             <SectionTitle title={`Trending Must Have`} />
-            <div className='flex justify-center gap-20'>
+            <div className='flex sm:flex-col md:flex-row lg:flex-row items-center justify-center gap-20'>
                 <div className='w-96'>
                     <img src="https://i.ibb.co/f4pC4jQ/4-org-zoom-1.png" alt="" />
                     <div className='flex justify-between bottom-0 text-white p-4' style={{ backgroundColor: '#262626' }}>
