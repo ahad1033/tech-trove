@@ -4,7 +4,7 @@ import React from 'react';
 const ContactUs = () => {
     return (
         <div className='section-container flex flex-row'>
-            <div className='w-1/2 p-14 relative' style={{ backgroundColor: '#262626' }}>
+            <div className='w-full lg:w-1/2 p-14 relative' style={{ backgroundColor: '#262626' }}>
                 <h2 className='text-5xl font-bold text-white'>Tell us about your <p className='mt-3' style={{ color: '#FFC94B' }}>Concerns</p></h2>
                 <div className="form-control w-full mt-8">
                     <label className="label">
@@ -32,7 +32,7 @@ const ContactUs = () => {
                 </div>
                 <button className='btn button-primary-wide mt-10' >Send</button>
             </div>
-            <div className='w-1/2 relative overflow-hidden'>
+            <div className='hidden lg:w-1/2 relative lg:block'>
                 <div className="h-full" style={{ background: `url('https://i.ibb.co/hXjcCxW/banner-Left.jpg') center/cover no-repeat` }}></div>
             </div>
         </div>
