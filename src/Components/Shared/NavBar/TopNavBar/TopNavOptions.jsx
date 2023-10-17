@@ -6,7 +6,7 @@ const TopNavOptions = () => {
     const navOptions = <>
     <Link className='text-base mx-2' to='/'>Home</Link>
     <span className='mx-2 text-base'>|</span>
-    <Link className='text-base mx-2' to='/'>About Us</Link>
+    <Link className='text-base mx-2' to='/aboutus'>About Us</Link>
     <span className='mx-2 text-base'>|</span>
     <Link className='text-base mx-2' to='/blog'>Blog</Link>
     <span className='mx-2 text-base'>|</span>
