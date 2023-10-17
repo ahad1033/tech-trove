@@ -15,13 +15,13 @@ const MiddleAbout = () => {
                         <AiOutlineShop className='w-full text-5xl justify-center' style={{ color: '#3E60C9' }} />
                         <h3 className='text-xl font-bold my-5'>Full category shop</h3>
                         <p className='text-md text-justify'>Explore our comprehensive online store where you'll find a diverse range of products across multiple categories, all curated to cater to your various needs and ...</p>
-                        <button className='button-primary text-center mt-3'>Read More <AiOutlineArrowRight /></button>
+                        <button className='button-primary-wide text-center mt-3'>Read More <AiOutlineArrowRight /></button>
                     </div>
                     <div className='flex flex-col justify-between text-center p-7 bg-base-100 shadow-lg rounded-2xl'>
                         <BsBox2 className='w-full text-4xl justify-center' style={{ color: '#3E60C9' }} />
                         <h3 className='text-xl font-bold my-5'>Extraordinary discount</h3>
                         <p className='text-md text-justify'> Experience unparalleled savings on a wide selection of premium products that enhance your lifestyle without compromising on quality...</p>
-                        <button className='button-primary text-center mt-3'>Read More <AiOutlineArrowRight /></button>
+                        <button className='button-primary-wide text-center mt-3'>Read More <AiOutlineArrowRight /></button>
                     </div>
                     <div className='flex flex-col justify-between text-center p-7 bg-base-100 shadow-lg rounded-2xl'>
                         <div className='flex justify-center'>
@@ -29,13 +29,13 @@ const MiddleAbout = () => {
                         </div>
                         <h3 className='text-xl font-bold my-5'>Free Cargo</h3>
                         <p className='text-md text-justify'>Enjoy the convenience of free cargo services, ensuring your purchases are delivered right to your doorstep without any additional cost. Experience seamless...</p>
-                        <button className='button-primary text-center mt-3'>Read More <AiOutlineArrowRight /></button>
+                        <button className='button-primary-wide text-center mt-3'>Read More <AiOutlineArrowRight /></button>
                     </div>
                     <div className='flex flex-col justify-between text-center p-7 bg-base-100 shadow-lg rounded-2xl'>
                         <AiOutlineShop className='w-full text-5xl justify-center' style={{ color: '#3E60C9' }} />
                         <h3 className='text-xl font-bold my-5'>24-hour customer service</h3>
                         <p className='text-md text-justify'>Our commitment to exceptional customer care means our 24-hour customer service team is always available to assist you, ensuring your inquiries and concerns...</p>
-                        <button className='button-primary text-center mt-3'>Read More <AiOutlineArrowRight /></button>
+                        <button className='button-primary-wide text-center mt-3'>Read More <AiOutlineArrowRight /></button>
                     </div>
                 </div>
             </div>
