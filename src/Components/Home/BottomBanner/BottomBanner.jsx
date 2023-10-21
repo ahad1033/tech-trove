@@ -1,5 +1,5 @@
 import React from 'react';
-import SharedBanner from '../../Shared/SharedBanner/sharedBanner';
+import SharedBanner from '../../Shared/SharedBanner/SharedBanner';
 
 const BottomBanner = () => {
     return (
