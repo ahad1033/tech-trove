@@ -7,9 +7,9 @@ import SocialIcons from './SocialIcons';
 const TopNavBar = () => {
 
     return (
-        <div className="navbar lg:flex-row md:flex-col sm:flex-row-reverse lg:justify-between md:justify-between sm:justify-between bg-white text-black section-container lg:py-7 md:py-3 sm:py-8 ">
+        <div className="navbar flex flex-row-reverse md:flex-col lg:flex-row lg:justify-between md:justify-between sm:justify-between bg-white text-black section-container sm:py-8 md:py-3 lg:py-7">
             <div className="w-full">
-                <div className="flex lg:flex-row md:flex-row gap-3 items-center justify-between">
+                <div className="flex md:flex-row lg:flex-row gap-3 items-center justify-between">
                     <Logo />
                     <SearchOption />
                 </div>

@@ -5,13 +5,13 @@ const TopNavOptions = () => {
 
     const navOptions = <>
     <Link className='text-base mx-2' to='/'>Home</Link>
-    <span className='mx-2 text-base'>|</span>
+    <span className='mx-2 text-base hidden lg:block'>|</span>
     <Link className='text-base mx-2' to='/aboutus'>About Us</Link>
-    <span className='mx-2 text-base'>|</span>
+    <span className='mx-2 text-base hidden lg:block'>|</span>
     <Link className='text-base mx-2' to='/blog'>Blog</Link>
-    <span className='mx-2 text-base'>|</span>
+    <span className='mx-2 text-base hidden lg:block'>|</span>
     <Link className='text-base mx-2' to='/blog'>Contact Us</Link>
-    <span className='mx-2 text-base'>|</span>
+    <span className='mx-2 text-base hidden lg:block'>|</span>
     <Link className='text-base mx-2' to='/blog'>Help & Support</Link>
   </>
 
@@ -25,7 +25,7 @@ const TopNavOptions = () => {
                     {navOptions}
                 </ul>
             </div>
-            <div className="lg:flex md:flex sm:hidden flex-row">
+            <div className="hidden md:flex lg:flex flex-row">
                 <ul className="menu menu-horizontal px-1 font-bold text-sm">
                     {navOptions}
                 </ul>
