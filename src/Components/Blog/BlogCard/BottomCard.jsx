@@ -3,7 +3,7 @@ import { BiComment } from 'react-icons/bi'
 
 const BottomCard = () => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-20'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-top gap-20'>
             <div className="bg-base-100 shadow-sm">
                 <figure><img className='w-full' src="https://i.ibb.co/QMq09cY/photo.png" alt="card" /></figure>
                 <div className="card-body">

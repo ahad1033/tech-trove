@@ -2,8 +2,8 @@ import React from 'react';
 
 const BlogGalaray = () => {
     return (
-        <div className='section-container w-full mx-auto flex justify-center gap-5 lg:my-16 md:my-10 sm:my-8 px-5 md:px-10 lg:px-0 pb-5 md:pb-0 lg:pb-0 '>
-            <div className='w-2/3 object-center'>
+        <div className='flex gap-5 my-8 md:my-10 lg:my-16 px-5 md:px-10 lg:px-0 pb-0 md:pb-0 lg:pb-0 '>
+            <div className='w-2/3'>
                 <img className='h-full object-cover' src="https://i.ibb.co/VgjVgY0/blog-Galary1.png" alt="" />
             </div>
             <div className='w-1/3 flex flex-col gap-5'>
