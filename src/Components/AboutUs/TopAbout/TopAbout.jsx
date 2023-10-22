@@ -3,7 +3,7 @@ import React from 'react';
 const TopAbout = () => {
     return (
         <div className='section-container flex items-center my-10 sm:gap-10 md:gap-20 lg:gap-36'>
-            <div className='lg:w-2/3'>
+            <div className='w-full lg:w-2/3 px-6 md:px-0 lg:px-0'>
                 <p className='text-lg md:text-xl lg:text-2xl mb-4'>Let's get to know TechTrove</p>
                 <h1 className='text-2xl md:text-3xl lg:text-6xl leading-normal'>Providing the best experience to make your <span style={{color: '#3E60C9'}}>Online Shopping</span> </h1>
                 <p className='my-6 sm:my:3 text-justify leading-10 sm:leading-7'>At Luminae, we are more than just an online store – we are your ultimate destination for an unparalleled shopping experience. Our journey began with a simple yet powerful idea: to create a platform that not only offers a wide array of products but also fosters a sense of community and connection among our customers.</p>
