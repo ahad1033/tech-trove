@@ -27,7 +27,7 @@ const BlogFooter = () => {
                     <div className='text-white py-3'>
                         <h2>Follow Us On Social Networks</h2>
                     </div>
-                    <div className='text-white flex gap-3 py-3 text-right'>
+                    <div className='text-white flex gap-3 py-3 justify-end'>
                         <FaFacebookF />
                         <AiOutlineTwitter />
                         <AiFillYoutube />
