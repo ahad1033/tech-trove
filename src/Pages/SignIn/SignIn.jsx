@@ -5,6 +5,7 @@ import BottomSection from '../../Components/Home/BottomSection/BottomSection';
 import Footer from '../../Components/Shared/Footer/Footer';
 import { FcGoogle } from 'react-icons/fc'
 import { PiWarningOctagonLight } from 'react-icons/pi'
+import SignUpComponent from '../../Components/SignIn/SignUpComponent/SignUpComponent';
 
 const SignIn = () => {
     return (
@@ -39,7 +40,10 @@ const SignIn = () => {
                     <p className='text-red-500 text-xs lg:text-sm mt-7 flex justify-center items-center gap-3'><PiWarningOctagonLight className='text-4xl md:text-3xl lg:text-2xl' />Sign up to  save $9 for free shipping with Ausff company through australlian territory</p>
                 </div>
                 {/* sign up */}
-                <div className='w-full md:w-1/2 lg:w1/2 px-10 md:px-0 lg:px-0 my-5 md:my-0 lg:my-0'>
+
+                <SignUpComponent />
+
+                {/* <div className='w-full md:w-1/2 lg:w1/2 px-10 md:px-0 lg:px-0 my-5 md:my-0 lg:my-0'>
                     <h2 className='text-xl font-semibold'>Sign up</h2>
                     <div className="form-control w-full mt-10 ">
                         <label className="label">
@@ -67,7 +71,7 @@ const SignIn = () => {
                         <hr className="flex-1 border-t border-gray-300" />
                     </div>
                     <button className='button-secondary-wide' style={{ textTransform: 'none' }}><FcGoogle /> sign up by google</button>
-                </div>
+                </div> */}
             </div>
             <BottomSection />
             <Footer />
