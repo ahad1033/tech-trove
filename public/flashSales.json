@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "productName": "Tonny Black",
+        "productDetails": "Shoulder bag-White-Plain",
+        "ratings": 4.5,
+        "price": 130,
+        "offerPrice": 90
+    },
+    {
+        "id": 2,
+        "productName": "Reebok",
+        "productDetails": "Women’s Powder sneakers",
+        "ratings": 3.9,
+        "price": 120,
+        "offerPrice": 112
+    },
+    {
+        "id": 3,
+        "productName": "Patso",
+        "productDetails": "Shoulder bag-Pink-Plain",
+        "ratings": 4.8,
+        "price": 90,
+        "offerPrice": 60
+    },
+    {
+        "id": 4,
+        "productName": "Sketchers",
+        "productDetails": "Sport-shoe 2102",
+        "ratings": 4.2,
+        "price": 145,
+        "offerPrice": 115 
+    }
+]
