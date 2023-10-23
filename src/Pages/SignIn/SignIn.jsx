@@ -4,7 +4,7 @@ import BottomNavBar from '../../Components/Shared/NavBar/BottomNavBar/BottomNavB
 import BottomSection from '../../Components/Home/BottomSection/BottomSection';
 import Footer from '../../Components/Shared/Footer/Footer';
 import { FcGoogle } from 'react-icons/fc'
-import {  PiWarningDiamondThin } from 'react-icons/pi'
+import { PiWarningOctagonLight } from 'react-icons/pi'
 
 const SignIn = () => {
     return (
@@ -35,8 +35,8 @@ const SignIn = () => {
                         <span className="text-gray-500 text-sm">OR</span>
                         <hr className="flex-1 border-t border-gray-300" />
                     </div>
-                    <button className='button-secondary-wide' style={{ textTransform: 'none' }}><span><FcGoogle /></span>sign in with google</button>
-                    <p className='text-red-500 text-xs lg:text-sm mt-7 flex justify-center items-center gap-3'><PiWarningDiamondThin />Sign up to  save $9 for free shipping with Ausff company through australlian territory</p>
+                    <button className='button-secondary-wide' style={{ textTransform: 'none' }}><FcGoogle />sign in with google</button>
+                    <p className='text-red-500 text-xs lg:text-sm mt-7 flex justify-center items-center gap-3'><PiWarningOctagonLight className='text-4xl md:text-3xl lg:text-2xl' />Sign up to  save $9 for free shipping with Ausff company through australlian territory</p>
                 </div>
                 {/* sign up */}
                 <div className='w-full md:w-1/2 lg:w1/2 px-10 md:px-0 lg:px-0 my-5 md:my-0 lg:my-0'>
