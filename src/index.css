@@ -5,10 +5,11 @@
 :root {
     --bg-secondary: #262626;
     --btn-bg-primary: #4172DC;
+    --btn-bg-secondary: #434343;
 }
 
 .section-container {
-    @apply px-4 md:px-10 lg:px-24;
+    @apply px-4 md:px-10 lg:px-24 xl:px-40;
   }
 
   .button-primary {
@@ -21,5 +22,11 @@
     @apply btn btn-xs sm:btn-sm md:btn-md lg:btn-lg uppercase text-white border-0 w-full;
     border-radius: var(--spacing-1, 4px);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), var(--btn-bg-primary);
+  }
+
+  .button-secondary-wide {
+    @apply btn btn-xs sm:btn-sm md:btn-md lg:btn-lg uppercase text-white border-0 w-full;
+    border-radius: var(--spacing-1, 4px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), var(--btn-bg-secondary);
   }
   
