@@ -3,6 +3,7 @@
         "id": 1,
         "productName": "Tonny Black",
         "productDetails": "Shoulder bag-White-Plain",
+        "productImg": "https://i.ibb.co/PgS2NFm/photo-bag.png",
         "ratings": 4.5,
         "price": 130,
         "offerPrice": 90
@@ -11,6 +12,7 @@
         "id": 2,
         "productName": "Reebok",
         "productDetails": "Women’s Powder sneakers",
+        "productImg": "https://i.ibb.co/RbPGZL9/rebook.png",
         "ratings": 3.9,
         "price": 120,
         "offerPrice": 112
@@ -19,6 +21,7 @@
         "id": 3,
         "productName": "Patso",
         "productDetails": "Shoulder bag-Pink-Plain",
+        "productImg": "https://i.ibb.co/G2snBnR/photo-bag.png",
         "ratings": 4.8,
         "price": 90,
         "offerPrice": 60
@@ -27,6 +30,7 @@
         "id": 4,
         "productName": "Sketchers",
         "productDetails": "Sport-shoe 2102",
+        "productImg": "https://i.ibb.co/THCpxhN/shoe.png",
         "ratings": 4.2,
         "price": 145,
         "offerPrice": 115 
