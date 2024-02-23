@@ -1,11 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import 'swiper/swiper-bundle.css'; */
-
 
 body {
-  background-color: #fff;
+  background-color: #262626;
+  color: #fff;
 }
 
 :root {

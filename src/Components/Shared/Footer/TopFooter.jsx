@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+
 import { BiLogoVisa, BiLogoMastercard } from 'react-icons/bi';
 import { FaCcPaypal } from 'react-icons/fa';
 import { AiOutlineDown } from 'react-icons/ai';
+import { useState } from 'react';
 
 const TopFooter = () => {
 

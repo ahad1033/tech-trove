@@ -7,7 +7,9 @@ const NavBar = () => {
     <>
       <TopNavBar />
       <BottomNavBar />
-      <CategoryNav />
+      <div className="hidden md:block lg:block">
+        <CategoryNav />
+      </div>
     </>
   );
 };

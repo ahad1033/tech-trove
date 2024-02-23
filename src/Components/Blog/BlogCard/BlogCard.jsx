@@ -1,4 +1,3 @@
-import React from 'react';
 // import TopCard from './TopCard';
 import BottomCard from './BottomCard';
 

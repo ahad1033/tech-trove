@@ -1,12 +1,12 @@
-import React from 'react';
+
 
 const TextualBlog = () => {
     return (
         <div className='section-container my-14 text-justify'>
-            <h1 className='text-2xl font-bold border-l-4 border-purple-600  px-5'>
+            <h1 className='text-2xl font-bold text-black border-l-4 border-purple-600  px-5'>
                 "Unveiling Timeless Elegance: Exploring the Allure of Vintage Fashion"
             </h1>
-            <p className='text-base mt-7  px-5 leading-7'>
+            <p className='text-base mt-7  px-5 text-gray-500 leading-7'>
                 The Essence of Time Travel
                 Vintage fashion allows us to transcend eras, stepping into the shoes of those who came before us. Each piece tells a story, offering a glimpse into the cultural and societal norms of its time. From the flapper dresses of the 1920s that embodied the spirit of rebellion to the tailored suits of the 1960s that epitomized sophistication, every era has its signature style waiting to be revived.
                 Quality Beyond Compare
