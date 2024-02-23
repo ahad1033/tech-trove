@@ -1,11 +1,10 @@
-import React from 'react';
 import { BiComment } from 'react-icons/bi'
 
 const BottomCard = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-top gap-20'>
-            <div className="bg-base-100 shadow-sm">
-                <figure><img className='w-full' src="https://i.ibb.co/QMq09cY/photo.png" alt="card" /></figure>
+            <div className="bg-base-100 shadow-sm rounded-2xl">
+                <figure><img className='w-full rounded-2xl' src="https://i.ibb.co/QMq09cY/photo.png" alt="card" /></figure>
                 <div className="card-body">
                     <p className='text-orange-500'>Fashion</p>
                     <h2 className="card-title">Stylish young man out in town</h2>
@@ -16,8 +15,8 @@ const BottomCard = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-base-100 shadow-sm">
-                <figure><img className='w-full' src="https://i.ibb.co/0Mx2xXR/photo.png" alt="card" /></figure>
+            <div className="bg-base-100 shadow-sm rounded-2xl">
+                <figure><img className='w-full rounded-2xl' src="https://i.ibb.co/0Mx2xXR/photo.png" alt="card" /></figure>
                 <div className="card-body">
                     <p className='text-orange-500'>tech</p>
                     <h2 className="card-title">Aptkdoe Smartwatch Women Men </h2>
@@ -28,8 +27,8 @@ const BottomCard = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-base-100 shadow-sm sm:hide">
-                <figure><img className='w-full' src="https://i.ibb.co/NTkhLKF/photo.png" alt="card" /></figure>
+            <div className="bg-base-100 shadow-sm rounded-2xl sm:hide">
+                <figure><img className='w-full rounded-2xl' src="https://i.ibb.co/NTkhLKF/photo.png" alt="card" /></figure>
                 <div className="card-body">
                     <p className='text-orange-500'>tech</p>
                     <h2 className="card-title">Anker 325 power bank</h2>
@@ -40,8 +39,8 @@ const BottomCard = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-base-100 shadow-sm">
-                <figure><img className='w-full' src="https://i.ibb.co/QMq09cY/photo.png" alt="card" /></figure>
+            <div className="bg-base-100 shadow-sm rounded-2xl">
+                <figure><img className='w-full rounded-2xl' src="https://i.ibb.co/QMq09cY/photo.png" alt="card" /></figure>
                 <div className="card-body">
                     <p className='text-orange-500'>Fashion</p>
                     <h2 className="card-title">Stylish young man out in town</h2>
@@ -52,8 +51,8 @@ const BottomCard = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-base-100 shadow-sm">
-                <figure><img className='w-full' src="https://i.ibb.co/0Mx2xXR/photo.png" alt="card" /></figure>
+            <div className="bg-base-100 shadow-sm rounded-2xl">
+                <figure><img className='w-full rounded-2xl' src="https://i.ibb.co/0Mx2xXR/photo.png" alt="card" /></figure>
                 <div className="card-body">
                     <p className='text-orange-500'>tech</p>
                     <h2 className="card-title">Aptkdoe Smartwatch Women Men </h2>
@@ -64,8 +63,8 @@ const BottomCard = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-base-100 shadow-sm sm:hide">
-                <figure><img className='w-full' src="https://i.ibb.co/NTkhLKF/photo.png" alt="card" /></figure>
+            <div className="bg-base-100 shadow-sm rounded-2xl sm:hide">
+                <figure><img className='w-full rounded-2xl' src="https://i.ibb.co/NTkhLKF/photo.png" alt="card" /></figure>
                 <div className="card-body">
                     <p className='text-orange-500'>tech</p>
                     <h2 className="card-title">Anker 325 power bank</h2>

@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 const TopNavOptions = () => {
 
     const navOptions = <>
-    <Link className='text-base mx-2' to='/'>Home</Link>
-    <span className='mx-2 text-base hidden lg:block'>|</span>
-    <Link className='text-base mx-2' to='/aboutus'>About Us</Link>
-    <span className='mx-2 text-base hidden lg:block'>|</span>
-    <Link className='text-base mx-2' to='/blog'>Blog</Link>
-    <span className='mx-2 text-base hidden lg:block'>|</span>
-    <Link className='text-base mx-2' to='/'>Contact Us</Link>
-    <span className='mx-2 text-base hidden lg:block'>|</span>
-    <Link className='text-base mx-2' to='/'>Help & Support</Link>
+    <Link className='text-sm mx-2' to='/'>Home</Link>
+    <span className='mx-2 text-sm hidden lg:block'>|</span>
+    <Link className='text-sm mx-2' to='/aboutus'>About Us</Link>
+    <span className='mx-2 text-sm hidden lg:block'>|</span>
+    <Link className='text-sm mx-2' to='/blog'>Blog</Link>
+    <span className='mx-2 text-sm hidden lg:block'>|</span>
+    <p className='text-sm mx-2' >Contact Us</p>
+    <span className='mx-2 text-sm hidden lg:block'>|</span>
+    <p className='text-sm mx-2' >Help & Support</p>
   </>
 
     return (

@@ -11,7 +11,7 @@ const FlashSale = () => {
         .then (res => res.json())
         .then (data => setProducts(data))
     },[])
-    console.log(products);
+    // console.log(products);
     return (
         // TO DO.....
         <section className='section-container'>

@@ -1,4 +1,3 @@
-import React from 'react';
 import BottomNavCategory from './BottomNavCategory';
 import Coupon from './Coupon';
 import SignInComponent from './SignInComponent';
