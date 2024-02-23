@@ -1,4 +1,3 @@
-import React from 'react';
 import FooterIcons from './FooterIcons';
 
 const BottomFooter = () => {
