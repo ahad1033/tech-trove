@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../../Components/Shared/Footer/Footer";
 import { GoInfo } from "react-icons/go";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const [localCart, setLocalCart] = useState(() => {
@@ -31,6 +32,20 @@ const Cart = () => {
       const updatedCart = { ...prevCart, items: updatedItems };
       updateLocalStorage(updatedCart);
       return updatedCart;
+    });
+  };
+
+  const handleCheckout = () => {
+    localStorage.removeItem("cart");
+
+    setLocalCart({ items: [] });
+
+    document.getElementById("my_modal_3").close();
+
+    Swal.fire({
+      icon: "success",
+      title: "Success!",
+      text: "Your order has been submitted successfully.",
     });
   };
 
@@ -93,6 +108,9 @@ const Cart = () => {
             <div>
               <button
                 className="button-primary-wide"
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
               >
                 Proceed to Checkout
               </button>
@@ -100,6 +118,65 @@ const Cart = () => {
           </div>
         )}
       </div>
+      <dialog id="my_modal_3" className="modal">
+        <div className="modal-box bg-white">
+          <form method="dialog">
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
+          </form>
+          <h3 className="font-bold text-lg">
+            Fill the form to get Cash on Delivery
+          </h3>
+          <div>
+            <div className="form-control w-full mt-5 md:mt-8 lg:mt-8">
+              <label className="label">
+                <span className="label-text text-black mb-3">Your Name</span>
+              </label>
+              <div>
+                <input
+                  type="text"
+                  // value={name}
+                  // onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter Your Name Here"
+                  className="input input-bordered border-black w-full bg-transparent text-black"
+                />
+              </div>
+            </div>
+            <div className="form-control w-full mt-5 md:mt-8 lg:mt-8">
+              <label className="label">
+                <span className="label-text text-black mb-3">Email</span>
+              </label>
+              <div>
+                <input
+                  type="email"
+                  // value={email}
+                  // onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter Your Email Here"
+                  className="input input-bordered border-black w-full bg-transparent text-black"
+                />
+              </div>
+            </div>
+            <div className="form-control mt-5 md:mt-8 lg:mt-8">
+              <label className="label">
+                <span className="label-text text-black mb-3">Address</span>
+              </label>
+              <textarea
+                // value={description}
+                // onChange={(e) => setDescription(e.target.value)}
+                className="textarea textarea-bordered h-24 border-black bg-transparent text-black"
+                placeholder="Write the full address"
+              ></textarea>
+            </div>
+            <button
+              className="button-primary-sm text-end mt-4"
+              onClick={handleCheckout}
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </dialog>
       <div>
         <Footer />
       </div>
