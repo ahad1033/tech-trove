@@ -2,12 +2,12 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../Components/Shared/NavBar/NavBar";
 
 const Main = () => {
-    return (
-        <div className="mx-auto">
-            <NavBar />
-            <Outlet />
-        </div>
-    );
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
 };
 
 export default Main;
