@@ -5,7 +5,7 @@ import FlashSale from '../../Components/Home/FlashSale/FlashSale';
 import Trending from '../../Components/Trending/Trending';
 import BottomBanner from '../../Components/Home/BottomBanner/BottomBanner';
 import TopHundred from '../../Components/Home/TopHundred/TopHundred';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getAsyncAllProduct } from '../../Redux/features/Products/ProductsSlice';
 import { useEffect } from 'react';
 
@@ -16,8 +16,8 @@ const Home = () => {
         dispatch(getAsyncAllProduct())
     }, [dispatch])
 
-    const products = useSelector((state) => state.Products.products)
-    console.log(products)
+    // const products = useSelector((state) => state.Products.products)
+    // console.log(products)
     return (
         <div>
             <HomeBanner />
