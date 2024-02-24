@@ -1,26 +1,27 @@
-import { useEffect, useState } from "react";
 import Product from "./Product";
+import { useSelector } from "react-redux";
 
 const FlashSale = () => {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    fetch("flashSales.json")
-      // fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("flashSales.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setProducts(data));
+  // }, []);
+
+  const products = useSelector((state) => state.Products.products)
 
   return (
     // TO DO.....
     <section className="section-container">
       <div className="flex justify-between items-center my-12">
         <h3 className="text-2xl mb-2">Flash Sale</h3>
-        <button className="btn text-white btn-link">view all</button>
+        <button className="text-black btn btn-link">view all</button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-        {products.map((product) => (
-          <Product product={product} key={product.id} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-3">
+        {products?.slice(16 , 20).map((p) => (
+          <Product product={p} key={p.id} />
         ))}
       </div>
     </section>

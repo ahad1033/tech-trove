@@ -1,6 +1,6 @@
 import TopNavBar from "./TopNavBar/TopNavBar";
 import BottomNavBar from "./BottomNavBar/BottomNavBar";
-import CategoryNav from "./CategoryNav/CategoryNav";
+// import CategoryNav from "./CategoryNav/CategoryNav";
 
 const NavBar = () => {
   return (
@@ -8,7 +8,7 @@ const NavBar = () => {
       <TopNavBar />
       <BottomNavBar />
       <div className="hidden md:block lg:block">
-        <CategoryNav />
+        {/* <CategoryNav /> */}
       </div>
     </>
   );

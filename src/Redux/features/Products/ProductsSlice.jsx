@@ -31,7 +31,7 @@ const productsSlice = createSlice({
         })
         .addCase(getAsyncAllProduct.fulfilled, (state, action) => {
             state.status = "succeeded";
-            state.categories = action.payload;
+            state.products = action.payload;
         })
         .addCase(getAsyncAllProduct.rejected, (state, action) => {
             state.status = "rejected";
