@@ -1,4 +1,5 @@
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 // import { AiOutlineDown } from "react-icons/ai";
 
 const SearchOption = () => {
@@ -12,16 +13,9 @@ const SearchOption = () => {
       <details className="dropdown hidden lg:block">
         <summary className="mx-1 text-xs btn text-white normal-case whitespace-nowrap">
           <h4 className="flex flex-row items-center gap-2">
-            All Categories
-            {/* <span className="ml-1">
-              <AiOutlineDown />
-            </span> */}
+            <Link to="/products">All Categories</Link>
           </h4>
         </summary>
-        {/* <ul className="mt-2 p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                </ul> */}
       </details>
       <FaSearch className="text-3xl px-2 mx-2 border-s-2" />
     </div>

@@ -41,3 +41,28 @@ body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), var(--btn-bg-secondary);
   }
   
+/* --- back to top --- */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--btn-bg-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .back-to-top.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
