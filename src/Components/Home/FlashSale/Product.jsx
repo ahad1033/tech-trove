@@ -1,7 +1,34 @@
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, updateItemCount } from "../../../Redux/features/Cart/CartSlice";
 
 const Product = ({ product }) => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.Cart.items);
+
+  const handleAddToCart = () => {
+    const existingItem = cartItems.find((item) => item.id === product?.id);
+
+    if (existingItem) {
+      dispatch(updateItemCount({ id: product.id, count: existingItem.count + 1 }));
+    } else {
+      dispatch(addToCart({ ...product, count: 1 }));
+    }
+
+    const updatedLocalCart = JSON.parse(localStorage.getItem("cart")) || { items: [] };
+
+    const localExistingItem = updatedLocalCart.items.find((item) => item.id === product.id);
+
+    if (localExistingItem) {
+      localExistingItem.count += 1;
+    } else {
+      updatedLocalCart.items.push({ ...product, count: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(updatedLocalCart));
+  };
+
   const renderStars = () => {
     // start functionality
     const stars = [];
@@ -51,7 +78,7 @@ const Product = ({ product }) => {
               ${product?.price}
             </p>
           </div>
-          <button className="btn button-primary-sm">
+          <button className="btn button-primary-sm" onClick={handleAddToCart}>
             <IoCartOutline /> Add
           </button>
         </div>

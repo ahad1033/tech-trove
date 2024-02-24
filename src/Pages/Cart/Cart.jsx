@@ -3,7 +3,6 @@ import Footer from "../../Components/Shared/Footer/Footer";
 import { GoInfo } from "react-icons/go";
 
 const Cart = () => {
-  // Fetch local cart from localStorage and set initial state
   const [localCart, setLocalCart] = useState(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart"));
     return storedCart || { items: [] };
@@ -36,10 +35,9 @@ const Cart = () => {
   };
 
   // Calculate grand total
-  const grandTotal = localCart.items.reduce(
-    (total, item) => total + item.count * item.price,
-    0
-  );
+  const grandTotal = localCart.items
+    .reduce((total, item) => total + item.count * item.price, 0)
+    .toFixed(2);
 
   return (
     <div className="section-container w-full mx-auto">
@@ -76,7 +74,7 @@ const Cart = () => {
               </div>
               <div className="flex flex-col gap-2 items-end">
                 <p>Order: {i?.count}pcs</p>
-                <p>Total Price: ${i?.count * i?.price}</p>
+                <p>Total Price: ${(i?.count * i?.price).toFixed(2)}</p>
               </div>
             </div>
           ))
