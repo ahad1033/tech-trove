@@ -27,7 +27,7 @@ const FlashSale = () => {
     // TO DO.....
     <section className="section-container">
       <div className="flex justify-between items-center my-12">
-        <h3 className="text-2xl mb-2">Flash Sale</h3>
+        <h3 className="text-2xl mb-2">Flash Sell</h3>
         <button className="text-black btn btn-link" onClick={handleViewAll}>
           view all
         </button>

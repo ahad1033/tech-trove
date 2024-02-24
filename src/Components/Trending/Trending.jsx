@@ -19,11 +19,11 @@ const Trending = () => {
               </h1>
               <p className="text-center lg:text-start">Dotted dress-Casual</p>
             </div>
-            <div className="text-center mt-3 lg:mt-0">
+            {/* <div className="text-center mt-3 lg:mt-0">
               <button className="btn btn-outline text-white btn-sm lg:btn-md">
                 $89 Shop Now
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="w-96 px-10 md:px-0 lg:px-0">
@@ -38,11 +38,11 @@ const Trending = () => {
               </h1>
               <p className="text-center lg:text-start">Dotted dress-Casual</p>
             </div>
-            <div className="text-center mt-3 lg:mt-0">
+            {/* <div className="text-center mt-3 lg:mt-0">
               <button className="btn btn-outline text-white btn-sm lg:btn-md">
                 $105 Shop Now
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="w-96 px-10 md:px-0 lg:px-0">
@@ -57,11 +57,11 @@ const Trending = () => {
               </h1>
               <p className="text-center lg:text-start">Cream-Brown-Formal</p>
             </div>
-            <div className="text-center mt-3 lg:mt-0">
+            {/* <div className="text-center mt-3 lg:mt-0">
               <button className="btn btn-outline text-white btn-sm lg:btn-md">
                 $70 Shop Now
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

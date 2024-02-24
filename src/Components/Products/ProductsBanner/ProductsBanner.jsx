@@ -2,7 +2,7 @@ const ProductsBanner = () => {
   return (
     <div>
       <div
-      className="flex flex-col justify-center items-center"
+      className="flex flex-col justify-center items-center mb-16"
         style={{
           backgroundImage: `url('https://i.ibb.co/hXjcCxW/banner-Left.jpg')`,
           backgroundSize: "cover",
