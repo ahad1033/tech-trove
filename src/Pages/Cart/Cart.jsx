@@ -32,6 +32,12 @@ const Cart = () => {
     );
   };
 
+  // Calculate grand total
+  const grandTotal = cartProducts.reduce(
+    (total, item) => total + item.count * item.price,
+    0
+  );
+
   return (
     <div className="section-container w-full mx-auto">
       {cartProducts?.map((i) => (
@@ -48,8 +54,18 @@ const Cart = () => {
               <p>Unit pirce: ${i?.price}</p>
             </div>
             <div className="flex items-center justify-center px-10 gap-2">
-              <button className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl " onClick={() => handleDecreaseCount(i?.id)}>-</button>
-              <button className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl " onClick={() => handleIncreaseCount(i?.id)}>+</button>
+              <button
+                className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl "
+                onClick={() => handleDecreaseCount(i?.id)}
+              >
+                -
+              </button>
+              <button
+                className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl "
+                onClick={() => handleIncreaseCount(i?.id)}
+              >
+                +
+              </button>
             </div>
             <div className="flex flex-col gap-2 items-end">
               <p>Order: {i?.count}pcs</p>
@@ -58,6 +74,12 @@ const Cart = () => {
           </div>
         </>
       ))}
+
+        <div className="flex justify-end">
+          <p className="text-xl font-bold">Grand Total: ${grandTotal}</p>
+        </div>
+
+
       <Footer />
     </div>
   );
