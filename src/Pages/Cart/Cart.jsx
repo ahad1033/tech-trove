@@ -61,33 +61,33 @@ const Cart = () => {
           localCart?.items?.map((i) => (
             <div
               key={i.id}
-              className="card flex flex-row justify-between items-center w-full h-48 shadow-md mb-4 px-10"
+              className="card flex flex-col lg:flex-row justify-between items-center w-full h-full lg:h-48 shadow-md mb-4 py-5 px-5 lg:px-10"
             >
-              <div className="w-1/5 items-start">
-                <figure className="px-10 pt-10">
+              <div className="w-1/4 lg:w-1/5 items-start">
+                <figure className="px-2 lg:px-10 pt-2 lg:pt-10">
                   <img src={i?.image} alt={i?.title} className="h-20" />
                 </figure>
               </div>
-              <div className="card-body items-start">
-                <p className="text-xm text-primary">{i?.category}</p>
-                <h2 className="card-title">{i?.title}</h2>
+              <div className="card-body items-center lg:items-start">
+                <p className=" text-primary">{i?.category}</p>
+                <h2 className="card-title text-sm">{i?.title}</h2>
                 <p>Unit price: ${i?.price}</p>
               </div>
-              <div className="flex items-center justify-center px-10 gap-2">
+              <div className="flex items-center justify-center px-5 lg:px-10 gap-2 mb-4 lg:mb-0">
                 <button
-                  className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl "
+                  className="btn w-[20px] lg:w-[50px] h-[20px] lg:h-[50px] bg-secondary border-none text-white text-xl "
                   onClick={() => handleDecreaseCount(i?.id)}
                 >
                   -
                 </button>
                 <button
-                  className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl "
+                  className="btn w-[20px] lg:w-[50px] h-[20px] lg:h-[50px] bg-secondary border-none text-white text-xl "
                   onClick={() => handleIncreaseCount(i?.id)}
                 >
                   +
                 </button>
               </div>
-              <div className="flex flex-col gap-2 items-end">
+              <div className="flex flex-col gap-2 text-center lg:items-end">
                 <p>Order: {i?.count}pcs</p>
                 <p>Total Price: ${(i?.count * i?.price).toFixed(2)}</p>
               </div>

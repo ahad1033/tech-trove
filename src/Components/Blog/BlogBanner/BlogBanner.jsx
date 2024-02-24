@@ -5,7 +5,7 @@ const BlogBanner = () => {
     <div
       className="mx-auto bg-cover bg-center lg:px-32 md:px-10 sm:px-20 py-7 md:py-24 lg:py-36"
       style={{
-        backgroundImage: `url(https://i.ibb.co/9wk7cBx/stunning-barefooted-woman-trendy-fur-coat-dancing-laughing-photoshoot-1.png)`,
+        backgroundImage: `url(https://i.ibb.co/QmQNh7H/blogbanner.png)`,
         backgroundRepeat: "no-repeat",
       }}
     >
