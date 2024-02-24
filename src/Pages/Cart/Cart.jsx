@@ -1,41 +1,42 @@
-import { useDispatch } from "react-redux";
+import { useState } from "react";
 import Footer from "../../Components/Shared/Footer/Footer";
-import { updateItemCount } from "../../Redux/features/Cart/CartSlice";
 import { GoInfo } from "react-icons/go";
 
 const Cart = () => {
-  const dispatch = useDispatch();
-  
-  const localStorageCart = JSON.parse(localStorage.getItem("cart"));
+  // Fetch local cart from localStorage and set initial state
+  const [localCart, setLocalCart] = useState(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart"));
+    return storedCart || { items: [] };
+  });
+
+  const updateLocalStorage = (updatedCart) => {
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
 
   const handleIncreaseCount = (id) => {
-    const itemToUpdate = localStorageCart?.items?.find((item) => item?.id === id);
-
-    if (itemToUpdate) {
-      dispatch(
-        updateItemCount({
-          id,
-          count: itemToUpdate.count + 1,
-        })
+    setLocalCart((prevCart) => {
+      const updatedItems = prevCart.items.map((item) =>
+        item.id === id ? { ...item, count: item.count + 1 } : item
       );
-    }
+      const updatedCart = { ...prevCart, items: updatedItems };
+      updateLocalStorage(updatedCart);
+      return updatedCart;
+    });
   };
 
   const handleDecreaseCount = (id) => {
-    const itemToUpdate = localStorageCart?.items?.find((item) => item?.id === id);
-
-    if (itemToUpdate) {
-      dispatch(
-        updateItemCount({
-          id,
-          count: Math.max(itemToUpdate.count - 1, 0),
-        })
+    setLocalCart((prevCart) => {
+      const updatedItems = prevCart.items.map((item) =>
+        item.id === id ? { ...item, count: Math.max(item.count - 1, 0) } : item
       );
-    }
+      const updatedCart = { ...prevCart, items: updatedItems };
+      updateLocalStorage(updatedCart);
+      return updatedCart;
+    });
   };
 
   // Calculate grand total
-  const grandTotal = localStorageCart?.items?.reduce(
+  const grandTotal = localCart.items.reduce(
     (total, item) => total + item.count * item.price,
     0
   );
@@ -43,8 +44,8 @@ const Cart = () => {
   return (
     <div className="section-container w-full mx-auto">
       <div className="min-h-[75vh] md:min-h-[69vh] lg:min-h-[54vh] xl:min-h-[65vh] flex-grow-1 ">
-        {localStorageCart?.items?.length > 0 ? (
-          localStorageCart?.items?.map((i) => (
+        {localCart?.items?.length > 0 ? (
+          localCart?.items?.map((i) => (
             <div
               key={i.id}
               className="card flex flex-row justify-between items-center w-full h-48 shadow-md mb-4 px-10"
@@ -86,7 +87,7 @@ const Cart = () => {
           </p>
         )}
 
-        {localStorageCart?.items?.length > 0 && (
+        {localCart?.items?.length > 0 && (
           <div className="flex justify-end">
             <p className="text-xl font-bold">Grand Total: ${grandTotal}</p>
           </div>
