@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
+  cart: []
 };
 
 const cartSlice = createSlice({
@@ -20,11 +21,9 @@ const cartSlice = createSlice({
       }
     },
     removeFromCart: (state, action) => {
-      // Remove the item from the cart
       state.items = state.items.filter((item) => item.id !== action.payload);
     },
     updateItemCount: (state, action) => {
-      // Update the count of a specific item
       const { id, count } = action.payload;
       const itemToUpdate = state.items.find((item) => item.id === id);
       if (itemToUpdate) {

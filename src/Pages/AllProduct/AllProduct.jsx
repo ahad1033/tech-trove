@@ -14,7 +14,7 @@ const AllProduct = () => {
   const dispatch = useDispatch();
   const [searchInput, setSearchInput] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.Cart);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -40,8 +40,9 @@ const AllProduct = () => {
   }, [cart]);
 
   const handleAddToCart = (product) => {
+    // console.log(product);
     dispatch(addToCart(product));
-
+  
     Swal.fire({
       icon: "success",
       position: "top-right",
@@ -70,11 +71,11 @@ const AllProduct = () => {
       </div>
 
       <div className="section-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto my-10">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((p) => (
+        {filteredProducts?.length > 0 ? (
+          filteredProducts?.map((p) => (
             <>
               <div
-                key={p.id}
+                key={p?.id}
                 className="card xxl:w-96 bg-white shadow-lg lg:shadow-xl"
               >
                 <figure className="px-2 pt-3">

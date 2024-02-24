@@ -1,36 +1,41 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Footer from "../../Components/Shared/Footer/Footer";
 import { updateItemCount } from "../../Redux/features/Cart/CartSlice";
 import { GoInfo } from "react-icons/go";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const cartProducts = useSelector((state) => state.Cart.items);
-  // console.log("Cart", cartProducts);
+  
+  const localStorageCart = JSON.parse(localStorage.getItem("cart"));
 
   const handleIncreaseCount = (id) => {
-    dispatch(
-      updateItemCount({
-        id,
-        count: cartProducts?.find((item) => item?.id === id).count + 1,
-      })
-    );
+    const itemToUpdate = localStorageCart?.items?.find((item) => item?.id === id);
+
+    if (itemToUpdate) {
+      dispatch(
+        updateItemCount({
+          id,
+          count: itemToUpdate.count + 1,
+        })
+      );
+    }
   };
 
   const handleDecreaseCount = (id) => {
-    dispatch(
-      updateItemCount({
-        id,
-        count: Math.max(
-          cartProducts?.find((item) => item?.id === id).count - 1,
-          0
-        ),
-      })
-    );
+    const itemToUpdate = localStorageCart?.items?.find((item) => item?.id === id);
+
+    if (itemToUpdate) {
+      dispatch(
+        updateItemCount({
+          id,
+          count: Math.max(itemToUpdate.count - 1, 0),
+        })
+      );
+    }
   };
 
   // Calculate grand total
-  const grandTotal = cartProducts.reduce(
+  const grandTotal = localStorageCart?.items?.reduce(
     (total, item) => total + item.count * item.price,
     0
   );
@@ -38,8 +43,8 @@ const Cart = () => {
   return (
     <div className="section-container w-full mx-auto">
       <div className="min-h-[75vh] md:min-h-[69vh] lg:min-h-[54vh] xl:min-h-[65vh] flex-grow-1 ">
-        {cartProducts.length > 0 ? (
-          cartProducts.map((i) => (
+        {localStorageCart?.items?.length > 0 ? (
+          localStorageCart?.items?.map((i) => (
             <div
               key={i.id}
               className="card flex flex-row justify-between items-center w-full h-48 shadow-md mb-4 px-10"
@@ -81,7 +86,7 @@ const Cart = () => {
           </p>
         )}
 
-        {cartProducts?.length > 0 && (
+        {localStorageCart?.items?.length > 0 && (
           <div className="flex justify-end">
             <p className="text-xl font-bold">Grand Total: ${grandTotal}</p>
           </div>
