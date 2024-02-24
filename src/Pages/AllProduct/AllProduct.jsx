@@ -7,11 +7,13 @@ import Footer from "../../Components/Shared/Footer/Footer";
 import BottomSection from "../../Components/Home/BottomSection/BottomSection";
 import { FaSearch } from "react-icons/fa";
 import { GoInfo } from "react-icons/go";
+import { addToCart } from "../../Redux/features/Cart/CartSlice";
 
 const AllProduct = () => {
   const dispatch = useDispatch();
   const [searchInput, setSearchInput] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const cart = useSelector((state) => state.cart);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,11 +33,20 @@ const AllProduct = () => {
     setFilteredProducts(filtered);
   }, [searchInput, products]);
 
+  useEffect(() => {
+    const updatedCart = JSON.stringify(cart);
+    localStorage.setItem("cart", updatedCart);
+  }, [cart]);
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <>
       <ProductsBanner />
       <div className="flex justify-between items-center section-container mt-4">
-      <h3 className="text-2xl mb-2">Collect Yours</h3>
+        <h3 className="text-2xl mb-2">Collect Yours</h3>
         <div className="flex items-center h-14 w-2/5 justify-between px-3 border border-1 rounded-xl gap-2">
           <input
             type="text"
@@ -53,7 +64,10 @@ const AllProduct = () => {
         {filteredProducts.length > 0 ? (
           filteredProducts.map((p) => (
             <>
-              <div className="card xxl:w-96 bg-white shadow-lg lg:shadow-xl">
+              <div
+                key={p.id}
+                className="card xxl:w-96 bg-white shadow-lg lg:shadow-xl"
+              >
                 <figure className="px-2 pt-3">
                   <img src={p?.image} alt={p?.title} className="h-[250px]" />
                 </figure>
@@ -66,7 +80,10 @@ const AllProduct = () => {
                   </h2>
                   <div className="card-actions justify-between mt-3">
                     <p>${p?.price}</p>
-                    <button className="btn button-primary-sm">
+                    <button
+                      onClick={() => handleAddToCart(p)}
+                      className="btn button-primary-sm"
+                    >
                       <IoCartOutline /> Add
                     </button>
                   </div>
