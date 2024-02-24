@@ -1,7 +1,11 @@
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, updateItemCount } from "../../../Redux/features/Cart/CartSlice";
+import {
+  addToCart,
+  updateItemCount,
+} from "../../../Redux/features/Cart/CartSlice";
+import Swal from "sweetalert2";
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
@@ -11,20 +15,34 @@ const Product = ({ product }) => {
     const existingItem = cartItems.find((item) => item.id === product?.id);
 
     if (existingItem) {
-      dispatch(updateItemCount({ id: product.id, count: existingItem.count + 1 }));
+      dispatch(
+        updateItemCount({ id: product?.id, count: existingItem.count + 1 })
+      );
     } else {
       dispatch(addToCart({ ...product, count: 1 }));
     }
 
-    const updatedLocalCart = JSON.parse(localStorage.getItem("cart")) || { items: [] };
+    const updatedLocalCart = JSON.parse(localStorage.getItem("cart")) || {
+      items: [],
+    };
 
-    const localExistingItem = updatedLocalCart.items.find((item) => item.id === product.id);
+    const localExistingItem = updatedLocalCart.items.find(
+      (item) => item.id === product.id
+    );
 
     if (localExistingItem) {
       localExistingItem.count += 1;
     } else {
       updatedLocalCart.items.push({ ...product, count: 1 });
     }
+
+    Swal.fire({
+      icon: "success",
+      position: "top-right",
+      title: "Item added to cart",
+      showConfirmButton: false,
+      timer: 1500,
+    });
 
     localStorage.setItem("cart", JSON.stringify(updatedLocalCart));
   };
