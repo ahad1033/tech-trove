@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { getAsyncAllProduct } from "../../Redux/features/Products/ProductsSlice";
 import { IoCartOutline } from "react-icons/io5";
 import Footer from "../../Components/Shared/Footer/Footer";
+import BottomSection from "../../Components/Home/BottomSection/BottomSection";
 
 const AllProduct = () => {
   const dispatch = useDispatch();
@@ -45,6 +46,25 @@ const AllProduct = () => {
           </>
         ))}
       </div>
+      {/* megsafe section */}
+      <div
+        className="flex justify-around mt-16 lg:mt-32 p-3 md:p-5 lg:p-0"
+        style={{ backgroundColor: "#F7DDD0" }}
+      >
+        <div className="flex flex-col justify-center">
+          <h2 className="text-md md:text-xl lg:text-2xl font-semibold mb-2 lg:mb-5">
+            MAGSAFE
+          </h2>
+          <p className="text-xs md:text-lg lg:text-xl">
+            Snap on a magnetic case, wallet, or both. And get faster wireless
+            charging.
+          </p>
+        </div>
+        <figure>
+          <img src="https://i.ibb.co/cyNpFYx/Iphone.png" alt="" />
+        </figure>
+      </div>
+      <BottomSection />
       <Footer />
     </>
   );
