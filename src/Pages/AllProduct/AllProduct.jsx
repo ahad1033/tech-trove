@@ -8,6 +8,7 @@ import BottomSection from "../../Components/Home/BottomSection/BottomSection";
 import { FaSearch } from "react-icons/fa";
 import { GoInfo } from "react-icons/go";
 import { addToCart } from "../../Redux/features/Cart/CartSlice";
+import Swal from "sweetalert2";
 
 const AllProduct = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,14 @@ const AllProduct = () => {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
+
+    Swal.fire({
+      icon: "success",
+      position: "top-right",
+      title: "Item added to cart",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (

@@ -1,16 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "../../Components/Shared/Footer/Footer";
 import { updateItemCount } from "../../Redux/features/Cart/CartSlice";
+import { GoInfo } from "react-icons/go";
 
 const Cart = () => {
   const dispatch = useDispatch();
-
   const cartProducts = useSelector((state) => state.Cart.items);
-
-  console.log("Cart", cartProducts);
+  // console.log("Cart", cartProducts);
 
   const handleIncreaseCount = (id) => {
-    // Dispatch action to increase count
     dispatch(
       updateItemCount({
         id,
@@ -20,7 +18,6 @@ const Cart = () => {
   };
 
   const handleDecreaseCount = (id) => {
-    // Dispatch action to decrease count
     dispatch(
       updateItemCount({
         id,
@@ -40,47 +37,59 @@ const Cart = () => {
 
   return (
     <div className="section-container w-full mx-auto">
-      {cartProducts?.map((i) => (
-        <>
-          <div className="card flex flex-row justify-between items-center w-full h-48 shadow-md mb-4 px-10">
-            <div className="w-1/5 items-start">
-              <figure className="px-10 pt-10">
-                <img src={i?.image} alt={i?.title} className="h-20" />
-              </figure>
+      <div className="min-h-[75vh] md:min-h-[69vh] lg:min-h-[54vh] xl:min-h-[65vh] flex-grow-1 ">
+        {cartProducts.length > 0 ? (
+          cartProducts.map((i) => (
+            <div
+              key={i.id}
+              className="card flex flex-row justify-between items-center w-full h-48 shadow-md mb-4 px-10"
+            >
+              <div className="w-1/5 items-start">
+                <figure className="px-10 pt-10">
+                  <img src={i?.image} alt={i?.title} className="h-20" />
+                </figure>
+              </div>
+              <div className="card-body items-start">
+                <p className="text-xm text-primary">{i?.category}</p>
+                <h2 className="card-title">{i?.title}</h2>
+                <p>Unit price: ${i?.price}</p>
+              </div>
+              <div className="flex items-center justify-center px-10 gap-2">
+                <button
+                  className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl "
+                  onClick={() => handleDecreaseCount(i?.id)}
+                >
+                  -
+                </button>
+                <button
+                  className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl "
+                  onClick={() => handleIncreaseCount(i?.id)}
+                >
+                  +
+                </button>
+              </div>
+              <div className="flex flex-col gap-2 items-end">
+                <p>Order: {i?.count}pcs</p>
+                <p>Total Price: ${i?.count * i?.price}</p>
+              </div>
             </div>
-            <div className="card-body items-start">
-              <p className="text-xm text-primary">{i?.category}</p>
-              <h2 className="card-title">{i?.title}</h2>
-              <p>Unit pirce: ${i?.price}</p>
-            </div>
-            <div className="flex items-center justify-center px-10 gap-2">
-              <button
-                className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl "
-                onClick={() => handleDecreaseCount(i?.id)}
-              >
-                -
-              </button>
-              <button
-                className="btn w-[50px] h-[50px] bg-secondary border-none text-white text-xl "
-                onClick={() => handleIncreaseCount(i?.id)}
-              >
-                +
-              </button>
-            </div>
-            <div className="flex flex-col gap-2 items-end">
-              <p>Order: {i?.count}pcs</p>
-              <p>Total Price: {i?.count * i?.price}</p>
-            </div>
+          ))
+        ) : (
+          <p className="w-full flex items-center text-center text-red-500 text-sm mt-4">
+            <GoInfo className="me-2 text-lg text-red-5" />
+            <span className="text-red"> No product added in the cart yet</span>
+          </p>
+        )}
+
+        {cartProducts?.length > 0 && (
+          <div className="flex justify-end">
+            <p className="text-xl font-bold">Grand Total: ${grandTotal}</p>
           </div>
-        </>
-      ))}
-
-        <div className="flex justify-end">
-          <p className="text-xl font-bold">Grand Total: ${grandTotal}</p>
-        </div>
-
-
-      <Footer />
+        )}
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const TopNavBar = () => {
                 <Logo />
                 {/* <SearchOption /> */}
             </div>
-            <div className="flex mt-0 md:mt-4 lg:mt-0 justify-end gap-4 w-full items-center">
+            <div className="flex mt-0 md:mt-4 justify-start lg:justify-end lg:mt-0 gap-4 w-full items-center">
                 <TopNavOptions />
                 <SocialIcons />
             </div>

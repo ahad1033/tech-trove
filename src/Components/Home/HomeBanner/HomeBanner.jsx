@@ -7,8 +7,8 @@ const HomeBanner = () => {
       <div className="relative w-full lg:w-1/3 h-[70vh]">
         <img
           src="https://i.ibb.co/hXjcCxW/banner-Left.jpg"
-          alt=""
-          className="h-full object-cover object-center"
+          alt="Banner"
+          className="h-full w-full object-cover object-center"
         />
         <div className="absolute bottom-5 lg:bottom-5 right-5">
           <div className="flex flex-col items-center justify-center bg-white gap-2 py-8 px-8">
