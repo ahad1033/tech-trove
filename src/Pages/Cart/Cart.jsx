@@ -86,8 +86,17 @@ const Cart = () => {
         )}
 
         {localCart?.items?.length > 0 && (
-          <div className="flex justify-end">
-            <p className="text-xl font-bold">Grand Total: ${grandTotal}</p>
+          <div className="flex items-center justify-between mt3">
+            <div className="flex justify-end">
+              <p className="text-xl font-bold">Grand Total: ${grandTotal}</p>
+            </div>
+            <div>
+              <button
+                className="button-primary-wide"
+              >
+                Proceed to Checkout
+              </button>
+            </div>
           </div>
         )}
       </div>
