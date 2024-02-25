@@ -3,13 +3,13 @@ import { BsFillBookmarkFill } from "react-icons/bs";
 const BlogBanner = () => {
   return (
     <div
-      className="mx-auto bg-cover bg-center lg:px-32 md:px-10 sm:px-20 py-7 md:py-24 lg:py-36"
+      className="flex items-center ps-5 lg:ps-20 mx-auto bg-cover bg-center h-[60vh] lg:h-[85vh]"
       style={{
         backgroundImage: `url(https://i.ibb.co/QmQNh7H/blogbanner.png)`,
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="flex">
+      <div className="flex items-center justify-center lg:justify-start">
         <div className="text-white text-2xl md:text-3xl lg:text-5xl pt-5 md:pt-10 ps-5 lg:pt-20 pr-5 md:pr-5 lg:pr-10">
           <span>
             <BsFillBookmarkFill />

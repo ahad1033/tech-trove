@@ -8,7 +8,7 @@ const Card = () => {
     return storedCart || { items: [] };
   });
 
-  console.log(localCart);
+  // console.log(localCart);
 
   useEffect(() => {
     const handleStorageChange = () => {

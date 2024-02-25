@@ -1,5 +1,5 @@
 import { RiUserLine } from "react-icons/ri";
-import { MdFavoriteBorder } from "react-icons/md";
+// import { MdFavoriteBorder } from "react-icons/md";
 import Card from "../Card";
 import { Link } from "react-router-dom";
 
@@ -15,12 +15,12 @@ const SignInComponent = () => {
           Sign In
         </p>
       </Link>
-      <p className="gap-2 flex flex-row items-center">
+      {/* <p className="gap-2 flex flex-row items-center">
         <span>
           <MdFavoriteBorder />
         </span>
         Favourite
-      </p>
+      </p> */}
       <Card />
     </div>
   );

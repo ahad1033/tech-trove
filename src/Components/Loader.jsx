@@ -1,23 +1,7 @@
-import { useEffect, useState } from "react";
-
 const Loader = () => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
-
   return (
-    <div>
-      {isVisible && (
-        <span className="preloader loading loading-dots loading-lg"></span>
-      )}
+    <div className="w-full mx-auto">
+      <span className="flex justify-center items-center w-[100px] text-primary mx-auto loading loading-dots"></span>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import Product from "./Product";
 import { useSelector } from "react-redux";
+import Loader from "../../Loader";
 
 const FlashSale = () => {
   // const [products, setProducts] = useState([]);
@@ -12,6 +13,9 @@ const FlashSale = () => {
   // }, []);
 
   const products = useSelector((state) => state.Products.products);
+  const status = useSelector((state) => state.Products.status);
+
+  console.log(status);
 
   const handleViewAll = () => {
     Swal.fire({
@@ -32,10 +36,15 @@ const FlashSale = () => {
           view all
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-3">
-        {products?.slice(16, 20).map((p) => (
+      <div className={` ${status === "loading" ? "w-full mx-auto items-center" : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-3"}`}>
+        {status === "loading" ? (
+          <Loader />
+        ) : (
+          products?.slice(16, 20).map((p) => <Product product={p} key={p.id} />)
+        )}
+        {/* {products?.slice(16, 20).map((p) => (
           <Product product={p} key={p.id} />
-        ))}
+        ))} */}
       </div>
     </section>
   );

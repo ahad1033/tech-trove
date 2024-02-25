@@ -4,12 +4,17 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 import { PiArticle } from "react-icons/pi";
 import { RxAvatar } from "react-icons/rx";
 import { useState } from "react";
+import { IoCartOutline } from "react-icons/io5";
 
 const TopNavOptions = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   const navOptions = (
@@ -65,27 +70,32 @@ const TopNavOptions = () => {
             menuOpen ? "block" : "hidden"
           }`}
         >
-          <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+          <li onClick={closeMenu} className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
             <Link className="text-xl">
               <GoHome className="text-xl" /> Home
             </Link>
           </li>
-          <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+          <li onClick={closeMenu} className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
             <Link className="text-xl" to="/about">
               <IoIosInformationCircleOutline className="text-xl" /> About
             </Link>
           </li>
-          <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+          <li onClick={closeMenu} className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
             <Link className="text-xl" to="/blog">
               <PiArticle className="text-xl" /> Blog
             </Link>
           </li>
-          <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+          <li onClick={closeMenu} className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
             <Link className="text-xl" to="/products">
               <PiArticle className="text-xl" /> All Product
             </Link>
           </li>
-          <li className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+          <li onClick={closeMenu} className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
+            <Link className="text-xl" to="/cart">
+              <IoCartOutline className="text-xl" /> Cart
+            </Link>
+          </li>
+          <li onClick={closeMenu} className="mx-2 mb-3 font-semibold text-base sm:text-sm hover:text-primary hover:bg-primary hover:bg-opacity-20">
             <Link className="text-xl" to="/signin">
               <RxAvatar className="text-xl" />
               Sign In

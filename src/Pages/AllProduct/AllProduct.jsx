@@ -61,7 +61,7 @@ const AllProduct = () => {
           <input
             type="text"
             placeholder="Search Products"
-            className="pl-2 border-none border-white bg-white focus:outline-none"
+            className="pl-2 w-2/3 border-none border-white bg-white focus:outline-none"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />

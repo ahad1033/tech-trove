@@ -1,19 +1,11 @@
 import { Link } from "react-router-dom";
 import TopProduct from "./TopProduct";
 import { useSelector } from "react-redux";
+import Loader from "../../Loader";
 
 const TopHundred = () => {
-  // const [topProducts, setTopProducts] = useState([]);
-
-  // useEffect(() => {
-  //   fetch("topHundred.json")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setTopProducts(data);
-  //     });
-  // }, []);
-
   const products = useSelector((state) => state.Products.products);
+  const status = useSelector((state) => state.Products.status);
 
   return (
     <div className="section-container">
@@ -25,10 +17,20 @@ const TopHundred = () => {
           </button>
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto">
-        {products?.slice(0, 12).map((p) => (
-          <TopProduct product={p} key={p.id} />
-        ))}
+      <div
+        className={` ${
+          status === "loading"
+            ? "w-full mx-auto items-center"
+            : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-3"
+        }`}
+      >
+        {status === "loading" ? (
+          <Loader />
+        ) : (
+          products
+            ?.slice(0, 12)
+            .map((p) => <TopProduct product={p} key={p.id} />)
+        )}
       </div>
     </div>
   );
