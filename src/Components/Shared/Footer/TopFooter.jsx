@@ -5,7 +5,7 @@ import FooterIcons from "./FooterIcons";
 
 const TopFooter = () => {
   return (
-    <div>
+    <>
       <div className="section-container mt-4 pb-1 flex justify-center sm:justify-between">
         <div className="flex gap-6 items-center text-gray-500">
           <BiLogoVisa className="text-6xl" />
@@ -17,7 +17,7 @@ const TopFooter = () => {
         </div>
       </div>
       <hr />
-    </div>
+    </>
   );
 };
 

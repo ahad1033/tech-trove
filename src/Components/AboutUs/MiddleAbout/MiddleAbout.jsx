@@ -1,4 +1,4 @@
-import { AiOutlineShop, AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineShop } from 'react-icons/ai';
 import { BsBox2 } from 'react-icons/bs';
 import { Ri24HoursFill } from 'react-icons/ri';
 
