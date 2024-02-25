@@ -73,7 +73,7 @@ const Product = ({ product }) => {
   return (
     <div className="card xxl:w-96 bg-white shadow-lg lg:shadow-xl">
       <figure>
-        <img src={product?.image} alt={product?.title} className="h-[250px]" />
+        <img src={product?.image} alt={product?.title} className="h-[250px]" loading="lazy" />
       </figure>
       <div className="card-body">
         <p className="text-primary text-sm font-semibold">

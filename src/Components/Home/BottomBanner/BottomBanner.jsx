@@ -39,7 +39,8 @@ const BottomBanner = () => {
             {/* <div className="h-full bg-cover" style={{ background: `url('https://i.ibb.co/98zB4Sf/Rectangle-1078.png') center/cover no-repeat` }}></div> */}
             <img
               className="rounded-e-lg h-full w-full"
-              src="https://i.ibb.co/98zB4Sf/Rectangle-1078.png"
+              // src="https://i.ibb.co/98zB4Sf/Rectangle-1078.png"
+              src="/item3.webp"
               alt=""
             />
           </div>
@@ -58,10 +59,10 @@ const BottomBanner = () => {
             <p className="text-xs lg:text-lg underline">Explore all category</p>
           </div>
           <div className="w-1/2">
-            {/* <div className="h-full bg-cover" style={{ background: `url('https://i.ibb.co/F62pqJN/Rectangle-1078.png') center/cover no-repeat` }}></div> */}
             <img
               className="rounded-e-lg h-full w-full"
-              src="https://i.ibb.co/F62pqJN/Rectangle-1078.png"
+              // src="https://i.ibb.co/F62pqJN/Rectangle-1078.png"
+              src="/item4.webp"
               alt=""
             />
           </div>
