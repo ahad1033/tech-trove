@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 const axiosInstance = axios.create({
-    // baseURL: "https://api.fakestorejson.com/api/v1/public",
-    baseURL: "https://fakestoreapi.com/",
+    // baseURL: "https://fakestoreapi.com/",
+    baseURL: "http://localhost:9000",
   });
   
   export default axiosInstance;
