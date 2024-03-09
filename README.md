@@ -6,7 +6,7 @@ Axios manages HTTP requests, connecting the frontend with a robust backend built
 
 Key features include flash sell items, an intuitive shopping cart, and streamlined order placement with robust form validation for error handling. The project showcases modern web development practices, providing users with a visually appealing and efficient E-commerce platform.
 
-### Links:
+### Live Links:
 [Click here](https://calm-profiterole-7eb5b7.netlify.app/)
 
 ### Server Code Links:
